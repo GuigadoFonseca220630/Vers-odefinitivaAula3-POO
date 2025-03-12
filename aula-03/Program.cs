@@ -36,6 +36,9 @@ Console.WriteLine($"O volume da tv é: {tvSala.Volume}");
 tvSala.AlternarModoMudo();
 
 
+tvSala.subircanal();
+Console.WriteLine($"canal da tv: {tvSala.canalsobedesce}");
+
 
 
 

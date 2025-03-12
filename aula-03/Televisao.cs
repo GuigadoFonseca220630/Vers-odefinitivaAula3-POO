@@ -17,6 +17,7 @@ public class Televisao
         }
         Tamanho = tamanho;
         Volume = VOLUME_PADRAO;
+        canalsobedesce = 17;
     }
 
     //Optamos pela utilização da constante para tornar o código mais legível.
@@ -27,6 +28,8 @@ public class Televisao
     private const int VOLUME_PADRAO = 10;
 
     private int _ultimoVolume = VOLUME_PADRAO;
+
+
 
 
 
@@ -45,6 +48,8 @@ public class Televisao
     public int Volume { get; private set; }
     public int Canal { get; set; }
     public bool Estado { get; set; }
+    public int canalsobedesce { get; set; }
+    
 
     public void AumentarVolume()
     {
@@ -86,6 +91,12 @@ public class Televisao
         {
             Volume = _ultimoVolume;
             Console.WriteLine($"O volume da TV é: {Volume}.");
+
         }
+    }
+
+    public void subircanal()
+    {
+        canalsobedesce = canalsobedesce + 1;
     }
 }
