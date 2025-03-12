@@ -8,13 +8,13 @@ public class TelevisaoTest
     [TestMethod]
     public void Dado_Tamanho_21_Deve_Retornar_Excecao()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(21f), $"O tamanho(21) n�o � suportado!");
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(21f), $"O tamanho (21) não é suportado!");
     }
 
     [TestMethod]
     public void Dado_Tamanho_81_Deve_Retornar_Excecao()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(81f), $"O tamanho(81) n�o � suportado!");
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(81f), $"O tamanho (81) não é suportado!");
     }
 
     [TestMethod]
@@ -49,7 +49,7 @@ public class TelevisaoTest
     {
         Televisao televisao = new Televisao(25f);
         televisao.DiminuirVolume();
-        Assert.AreEqual(09, televisao.Volume);
+        Assert.AreEqual(9, televisao.Volume);
     }
 
     [TestMethod]
@@ -59,7 +59,6 @@ public class TelevisaoTest
         televisao.AlternarModoMudo();
         Assert.AreEqual(0, televisao.Volume);
     }
-
 
     [TestMethod]
     public void Deve_Restaurar_Volume_Anterior_Ao_Desmutar()
@@ -115,7 +114,4 @@ public class TelevisaoTest
         televisao.AlternarModoMudo();
         Assert.AreEqual(volumeInicial, televisao.Volume);
     }
-
-
-    
 }
